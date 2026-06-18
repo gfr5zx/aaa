@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คูปองส่งฟรี | เดอะพูห์ช็อป</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- เมนู -->
+<nav class="navbar">
+
+    <div class="logo">
+        🛏 เดอะพูห์ช็อป
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="ค้นหาคูปองหรือสินค้า">
+        <button>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="coupon.html">คูปองส่งฟรี</a></li>
+        <li><a href="products.html">สินค้า</a></li>
+        <li><a href="cart.html">รถเข็น</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+
+        <li class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+<!-- ส่วนคูปอง -->
+ <script>
+let couponCount = 0;
+
+function saveCoupon(btn) {
+
+    if(btn.dataset.saved === "true"){
+        return;
+    }
+
+    btn.dataset.saved = "true";
+
+    couponCount++;
+
+    document.getElementById("couponCount").innerText = couponCount;
+
+    btn.innerText = "✓ เก็บแล้ว";
+    btn.disabled = true;
+}
+</script>
+<section class="coupon-page">
+
+    <h1 class="coupon-title">
+         คูปองส่วนลดและส่งฟรี
+    </h1>
+
+    <p class="coupon-subtitle">
+        เก็บคูปองก่อนสั่งซื้อสินค้า
+        
+    </p>
+
+    <div class="coupon-grid">
+
+        <div class="coupon-card">
+            <div class="coupon-code">FREE100</div>
+
+            <p class="coupon-desc">
+                🚚 ส่งฟรีทั่วประเทศ
+            </p>
+
+            <button onclick="saveCoupon(this)">
+    เก็บคูปอง
+</button>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-code">SAVE50</div>
+
+            <p class="coupon-desc">
+                💰 ลดเพิ่ม 50 บาท
+            </p>
+
+            <button onclick="saveCoupon(this)">
+    เก็บคูปอง
+</button>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-code">SAVE100</div>
+
+            <p class="coupon-desc">
+                💳 ลดเพิ่ม 100 บาท เมื่อซื้อครบ 1,000 บาท
+            </p>
+
+            <button onclick="saveCoupon(this)">
+    เก็บคูปอง
+</button>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-code">SALE20</div>
+
+            <p class="coupon-desc">
+                🔥 ลด 20% สำหรับสินค้าร่วมรายการ
+            </p>
+
+           <button onclick="saveCoupon(this)">
+    เก็บคูปอง
+</button>
+        </div>
+        <div class="coupon-card">
+    <div class="coupon-code">NEWUSER</div>
+
+    <p class="coupon-desc">
+        🎉 สมาชิกใหม่ลด 80 บาท
+    </p>
+
+    <button onclick="saveCoupon(this)">
+    เก็บคูปอง
+</button>
+</div><div class="coupon-card">
+    <div class="coupon-code">NEWUSER</div>
+
+    <p class="coupon-desc">
+        🎉 สมาชิกใหม่ลด 100 บาท
+    </p>
+
+    <button onclick="saveCoupon(this)">
+    เก็บคูปอง
+</button>
+</div>
+    </div>
+
+    <div class="saved-coupon">
+
+       <h2>
+    📦 คูปองที่เก็บไว้
+    (<span id="couponCount">0</span>)
+</h2>
+
+    </div>
+
+</section>
+
+<!-- แชท -->
+<div class="chat-box"
+onclick="openChat()">
+    💬 แชทร้านค้า
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

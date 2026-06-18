@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า | เดอะพูห์ช็อป</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- เมนู -->
+<nav class="navbar">
+
+    <div class="logo">
+        🛏 เดอะพูห์ช็อป
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="ค้นหาผ้าห่ม">
+        <button>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="coupon.html">คูปองส่งฟรี</a></li>
+        <li><a href="products.html">สินค้า</a></li>
+        <li><a href="cart.html">รถเข็น</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+
+        <li class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+</div>
+
+<!-- สินค้า -->
+<section class="section">
+
+    <h2>🛏 สินค้าทั้งหมด</h2>
+
+    <div class="products-grid">
+
+        <!-- สินค้า 1 -->
+        <div class="product-card">
+
+            <img
+            src="https://down-th.img.susercontent.com/file/sg-11134201-22100-2wb6adaa27ive1"
+            alt="ผ้าห่มขนนุ่ม">
+
+            <h3>ผ้าห่มขนนุ่ม</h3>
+
+            <p class="price">299 บาท</p>
+
+            <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+        </div>
+
+        <!-- สินค้า 2 -->
+        <div class="product-card">
+
+            <img
+            src="https://img.lazcdn.com/g/ff/kf/Sdaa3617f53c3445590071882d12232abT.jpg_720x720q80.jpg"
+            alt="ผ้าห่มขนนุ่มลายหมี">
+
+            <h3>ผ้าห่มขนนุ่มลายหมี</h3>
+
+            <p class="price">399 บาท</p>
+
+            <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+
+        </div>
+
+        <!-- สินค้า 3 -->
+        <div class="product-card">
+
+            <img
+            src="https://down-br.img.susercontent.com/file/sg-11134201-22110-d3z1f6e6nmjv36"
+            alt="ผ้าห่มขนนุ่มว">
+
+            <h3>ผ้าห่มขนนุ่ม</h3>
+
+            <p class="price">499 บาท</p>
+
+           <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+        </div>
+
+        <!-- สินค้า 4 -->
+        <div class="product-card">
+
+            <img
+            src="https://m.media-amazon.com/images/I/81FgNWWf+eL._AC_SL1500_.jpg"
+            alt="ผ้าห่มขนนุ่ม">
+
+            <h3>ผ้าห่มขนนุ่ม</h3>
+
+            <p class="price">259 บาท</p>
+
+            <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+        </div>
+         <!-- สินค้า 5 -->
+        <div class="product-card">
+
+            <img
+            src="https://img.bestdealplus.com/ae01/kf/S99cf07eae6c14353a80f003801ec47a6y.jpg"
+            alt="ผ้าห่มขนนุ่ม">
+
+            <h3>ผ้าห่มขนนุ่ม</h3>
+
+            <p class="price">199 บาท</p>
+
+            <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+
+        </div>
+         <!-- สินค้า 6 -->
+        <div class="product-card">
+
+            <img
+            src="https://cf.shopee.co.th/file/8ae51bcb7abad24be865c61f9096ceeb"
+            alt="ผ้าห่มขนนุ่มลายน้องแมว">
+
+            <h3>ผ้าห่มขนนุ่มลายน้องแมว</h3>
+
+            <p class="price">250 บาท</p>
+
+           <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+
+        </div>
+         <!-- สินค้า 7 -->
+        <div class="product-card">
+
+            <img
+            src="https://cf.shopee.co.th/file/a2f5434fdc0fb69ebfa2858a03d57fa8"
+            alt="ผ้าห่มขนนุ่มลายตาราง">
+
+            <h3>ผ้าห่มขนนุ่มลายตาราง</h3>
+
+            <p class="price">270 บาท</p>
+
+            <button onclick="addToCart()">
+    เพิ่มลงรถเข็น
+</button>
+
+        </div>
+         <!-- สินค้า 8 -->
+        <div class="product-card">
+
+            <img
+            src="https://down-th.img.susercontent.com/file/sg-11134201-822xz-mi469j66tgqq3e"
+            alt="ผ้าห่มขนนุ่มลายการ์ตูน">
+
+            <h3>ผ้าห่มขนนุ่มลายการ์ตูน</h3>
+
+            <p class="price">299 บาท</p>
+
+            <button onclick="addToCart()">
+                เพิ่มลงรถเข็น
+            </button>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ปุ่มไปยังรถเข็น -->
+<section class="section">
+
+    <div class="cart-box">
+
+        <h3>🛒 พร้อมสั่งซื้อแล้ว?</h3>
+
+        <br>
+
+        <a href="cart.html">
+            <button class="checkout-btn">
+                ไปที่รถเข็นสินค้า
+            </button>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- แชท -->
+<div class="chat-box"
+onclick="openChat()">
+    💬 แชทร้านค้า
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

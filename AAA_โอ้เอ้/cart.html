@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รถเข็นสินค้า | เดอะพูห์ช็อป</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- เมนู -->
+<nav class="navbar">
+
+    <div class="logo">
+        🛏 เดอะพูห์ช็อป
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="ค้นหาสินค้า">
+        <button>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="coupon.html">คูปองส่งฟรี</a></li>
+        <li><a href="products.html">สินค้า</a></li>
+        <li><a href="cart.html">รถเข็น</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+
+        <li class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <strong id="cartItem">0</strong>
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+<div class="cart-container">
+
+    <h1 class="cart-title">
+        🛒 รถเข็นสินค้า
+    </h1>
+
+        <!-- รายการสินค้า -->
+         <div class="cart-box">
+
+        <h3>รายการสินค้า</h3>
+
+        <br>
+
+        <p>
+            จำนวนสินค้าในรถเข็น :
+            <strong id="cartItem">
+                1
+            </strong>
+            ชิ้น
+        </p>
+
+        <br>
+
+        <p>
+            คูปองที่เก็บ :
+            <strong id="couponText">
+                ยังไม่ได้เก็บคูปอง
+            </strong>
+        </p>
+
+        <br>
+
+        <hr>
+
+        <br>
+
+        <p>
+            ราคาสินค้าเริ่มต้น :
+            <strong>
+                299 บาท
+            </strong>
+        </p>
+
+        <br>
+
+        <button class="checkout-btn"
+onclick="window.location.href='checkout.html'">
+    ✅ สั่งซื้อสินค้า
+</button>
+
+</section>
+
+<!-- ส่วนคูปอง -->
+<section class="section">
+
+    <div class="coupon-card">
+
+        <h3>🎁 มีคูปองแล้วหรือยัง?</h3>
+
+        <p>
+            หากยังไม่มีคูปอง สามารถกดรับได้ที่หน้าคูปอง
+        </p>
+
+        <br>
+
+        <a href="coupon.html">
+            <button class="coupon-btn">
+                ไปหน้าคูปอง
+            </button>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- แชท -->
+<div class="chat-box"
+onclick="openChat()">
+    💬 แชทร้านค้า
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

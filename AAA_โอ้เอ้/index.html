@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก | เดอะพูห์ช็อป</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- เมนู -->
+<nav class="navbar">
+
+    <div class="logo">
+        🛏 เดอะพูห์ช็อป
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="ค้นหาสินค้า">
+        <button>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="coupon.html">คูปองส่งฟรี</a></li>
+        <li><a href="products.html">สินค้า</a></li>
+        <li><a href="cart.html">รถเข็น</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+
+        <li class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+<div class="banner-content">
+
+    <h1>Blanket Shop</h1>
+
+<p>
+ร้านจำหน่ายผ้าห่มคุณภาพดี
+</p>
+
+<div class="auth-buttons">
+
+    <a href="login.html">
+        <button class="login-btn">
+            เข้าสู่ระบบ
+        </button>
+    </a>
+
+    <a href="register.html">
+        <button class="register-btn">
+            สมัครสมาชิก
+        </button>
+    </a>
+
+</div>
+</div>
+
+</section>
+
+<!-- โปรโมชั่น -->
+<section class="section">
+
+    <h2>🔥 โปรโมชั่นพิเศษ</h2>
+
+    <div class="coupon-container">
+
+        <div class="coupon-card">
+            <h3>สมาชิกใหม่</h3>
+            <p>รับส่วนลดทันที 50 บาท</p>
+        </div>
+
+        <div class="coupon-card">
+            <h3>ส่งฟรี</h3>
+            <p>เมื่อซื้อครบ 299 บาท</p>
+        </div>
+
+        <div class="coupon-card">
+            <h3>Flash Sale</h3>
+            <p>ลดสูงสุด 30%</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- สินค้าแนะนำ -->
+<section class="section">
+
+    <h2>⭐ สินค้าแนะนำ</h2>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+
+            <img src="https://down-th.img.susercontent.com/file/sg-11134201-22100-2wb6adaa27ive1">
+
+            <h3>ผ้าห่มขนนุ่ม </h3>
+
+            <p class="price">299 บาท</p>
+
+            <button onclick="addToCart()">
+                เพิ่มลงรถเข็น
+            </button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="https://img.lazcdn.com/g/ff/kf/Sdaa3617f53c3445590071882d12232abT.jpg_720x720q80.jpg">
+
+            <h3>ผ้าห่มขนนุ่มลายหมี</h3>
+
+            <p class="price">399 บาท</p>
+
+            <button onclick="addToCart()">
+                เพิ่มลงรถเข็น
+            </button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="https://down-br.img.susercontent.com/file/sg-11134201-22110-d3z1f6e6nmjv36">
+
+            <h3>ผ้าห่มขนนุ่ม</h3>
+
+            <p class="price">499 บาท</p>
+
+            <button onclick="addToCart()">
+                เพิ่มลงรถเข็น
+            </button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="https://m.media-amazon.com/images/I/81FgNWWf+eL._AC_SL1500_.jpg">
+
+            <h3>ผ้าห่มขนนุ่ม</h3>
+
+            <p class="price">259 บาท</p>
+
+            <button onclick="addToCart()">
+                เพิ่มลงรถเข็น
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- แชท -->
+<div class="chat-box"
+onclick="openChat()">
+    💬 แชทร้านค้า
+</div>
+
+<script src="js/script.js"></script>
+<div id="chatWindow" class="chat-window">
+
+    <div class="chat-header">
+        เดอะพูห์ช็อป
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+
+        <div class="bot">
+            สวัสดีค่ะ มีอะไรให้ช่วยไหมคะ 😊
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+        type="text"
+        id="messageInput"
+        placeholder="พิมพ์ข้อความ...">
+
+        <button onclick="sendMessage()">
+            ส่ง
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ชำระเงิน | เดอะพูห์ช็อป</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.checkout-container{
+    max-width:800px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.checkout-title{
+    text-align:center;
+    color:#ff5b21;
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.summary-box{
+    background:#f7f7f7;
+    padding:15px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.pay-btn{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    background:#ff5b21;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.pay-btn:hover{
+    opacity:.9;
+}
+
+.qr-box{
+    text-align:center;
+    margin-top:20px;
+}
+
+.qr-box img{
+    width:220px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="checkout-container">
+
+<h1 class="checkout-title">
+💳 หน้าชำระเงิน
+</h1>
+
+<div class="form-group">
+<label>ชื่อผู้รับ</label>
+<input type="text" id="fullname">
+</div>
+
+<div class="form-group">
+<label>เบอร์โทรศัพท์</label>
+<input type="tel" id="phone">
+</div>
+
+<div class="form-group">
+<label>ที่อยู่จัดส่ง</label>
+<textarea rows="4" id="address"></textarea>
+</div>
+
+<div class="form-group">
+<label>วิธีชำระเงิน</label>
+
+<select id="paymentMethod" onchange="showPayment()">
+<option value="">เลือกวิธีชำระเงิน</option>
+<option value="promptpay">PromptPay</option>
+<option value="cod">เก็บเงินปลายทาง</option>
+</select>
+
+</div>
+
+<div id="paymentArea"></div>
+
+<div class="summary-box">
+<h3>สรุปคำสั่งซื้อ</h3>
+
+<p>สินค้าในรถเข็น : 1 ชิ้น</p>
+<p>ยอดชำระทั้งหมด : <strong>299 บาท</strong></p>
+
+</div>
+
+<button class="pay-btn" onclick="confirmOrder()">
+ยืนยันการสั่งซื้อ
+</button>
+
+</div>
+
+<script>
+
+function showPayment(){
+
+const payment =
+document.getElementById("paymentMethod").value;
+
+const area =
+document.getElementById("paymentArea");
+
+if(payment==="promptpay"){
+
+area.innerHTML=`
+
+<div class="qr-box">
+
+<h3>สแกน QR PromptPay</h3>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PromptPay">
+
+<br><br>
+
+<input type="file">
+
+<p>แนบสลิปการโอนเงิน</p>
+
+</div>
+
+`;
+
+}else if(payment==="cod"){
+
+area.innerHTML=`
+
+<div class="summary-box">
+ชำระเงินปลายทางเมื่อได้รับสินค้า
+</div>
+
+`;
+
+}else{
+
+area.innerHTML="";
+}
+
+}
+
+function confirmOrder(){
+
+const name =
+document.getElementById("fullname").value;
+
+if(name===""){
+alert("กรุณากรอกชื่อผู้รับ");
+return;
+}
+
+alert("สั่งซื้อสำเร็จ");
+
+window.location.href =
+"success.html";
+
+}
+
+</script>
+
+</body>
+</html>
